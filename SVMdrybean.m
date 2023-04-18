@@ -50,8 +50,7 @@ response = 'drybeanTypes';
 class = {'BARBUNYA','BOMBAY','CALI','DERMASON','HOROZ','SEKER','SIRA'};
 
 % Train a multiclass ECOC classifier using SVM binary learners
-model = fitcecoc(xTrain,yTrain,'Learners',tempSVM,'ResponseName',response,...
-    'PredictorNames',predictor,'ClassNames',class)
+model = fitcecoc(xTrain,yTrain,'Learners',tempSVM,'ResponseName',response,'PredictorNames',predictor,'ClassNames',class)
 
 %%
 % Compute classification loss for multiclass ECOC model
