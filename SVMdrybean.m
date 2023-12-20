@@ -21,14 +21,14 @@
 drybean = readtable('Dry_Bean_Dataset.xlsx');
 
 % Specify inputs and targets
-targets = drybean.Class;
-inputs = drybean(:,1:16);
-inputs = table2array(inputs);
+targets = drybean.Class; 
+inputs = drybean(:,1:16); % Select all rows, column of 1 to 16
+inputs = table2array(inputs); 
 
 %%
 % Use cvpartition to split the data into 70% training and 30% test
 n = length(targets);
-splitdata = cvpartition(n,'Holdout',0.3);   % reserve 30% for test
+splitdata = cvpartition(n,'Holdout',0.3); % reserve 30% of the length of the data for test
 
 % Specify xTrain and yTrain
 xTrain = inputs(training(splitdata),:);
