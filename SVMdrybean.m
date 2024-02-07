@@ -42,7 +42,7 @@ yTest = targets(test(splitdata),:);
 
 %%
 % Create a template for SVM binary classifiers
-% Standardize the predictors, save support vectors and specify kernel function.
+% Standardize the predictors, save support vectors and specify kernel function ('gaussian' for rbf / 'linear'/ 'polynomial').
 tempSVM = templateSVM('Standardize',true,'SaveSupportVectors',true,'KernelFunction','gaussian');
 predictor = {'MajorAxisLength','MinorAxisLength'};
 response = 'drybeanTypes';
